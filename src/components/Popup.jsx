@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import ReactDOM from "react-dom";
+import { useEffect } from "react";
 
 function Popup({ selectItem, setSelectItem }) {
   if (!selectItem) return null;
@@ -7,10 +8,20 @@ function Popup({ selectItem, setSelectItem }) {
   const { poster_path, title, name, overview, vote_average } = selectItem;
   const imageUrl = `https://image.tmdb.org/t/p/original${poster_path}`;
 
+  useEffect(() => {
+    const keyDownClose = (e) => {
+      if (e.key === "Escape") {
+        setSelectItem(null);
+      }
+    };
+    window.addEventListener("keydown", keyDownClose);
+    return () => {
+      window.removeEventListener("keydown", keyDownClose);
+    };
+  }, []);
   const close = () => {
     setSelectItem(null);
   };
-
   return ReactDOM.createPortal(
     <div className="popupWrap">
       <div className="popupModal">
