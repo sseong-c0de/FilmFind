@@ -1,0 +1,254 @@
+@charset "utf-8";
+@font-face {
+  font-family: "Londrina Bold";
+  src: url("/Font/londrinasolid-regular-webfont.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Suit";
+  src: url("/Font/SUIT-Regular.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+/* 노트북 시작 */
+@media screen and (min-width: 1024px) {
+  .Header_Logo {
+    background-color: #27374d;
+    width: 100%;
+    height: 150px;
+    line-height: 150px;
+  }
+
+  h1 {
+    font-size: 5.2rem;
+    color: #fff;
+    text-align: center;
+  }
+  .MainBanner {
+    width: 100%;
+    height: 800px;
+    background: #000;
+  }
+  .SerchBox {
+    width: 80%;
+    margin: 0 auto;
+    padding-top: 270px;
+    /* display: flex; */
+    position: relative;
+  }
+  .SerchInput {
+    width: 100%;
+    height: 100px;
+    /* border-radius: 10px; */
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    font-size: 30px;
+    padding: 0;
+    border: 0;
+    border-bottom: 3px solid #d9d9d9;
+  }
+  .SerchInput::placeholder {
+    font-size: 2.4rem;
+    text-align: center;
+  }
+  .SerchBtn {
+    position: absolute;
+    right: 40px;
+    top: 34px;
+    width: 40px;
+    height: 40px;
+    background: #27374d;
+    border-radius: 100%;
+    border: none;
+  }
+  .SerchBtn:hover {
+    cursor: pointer;
+  }
+  .LinkBox {
+    width: 80%;
+    color: #fff;
+    margin: 0 auto;
+  }
+  .LinkBar {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    font-size: 40px;
+    padding-top: 100px;
+  }
+  .LinkBar button {
+    font-size: 4rem;
+    background: none;
+    color: #fff;
+    cursor: pointer;
+    border: none;
+    transition: all 0.5s;
+  }
+  .LinkBar button:hover {
+    color: #27374d;
+  }
+  .MoviePosters {
+    /* background: green;; */
+    margin: 0 auto;
+    width: 100%;
+    height: auto;
+  }
+  .posterBoxWrap {
+    width: 80%;
+    max-width: none;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  .posterBoxWrap.centerPoster {
+    justify-content: flex-start;
+    gap: 20px;
+  }
+  .posterBox {
+    height: auto;
+    width: 23%;
+  }
+  .posterBox h3 {
+    padding-bottom: 50px;
+  }
+  .movieNow {
+    width: 80%;
+    margin: 0 auto;
+    /* position: relative; */
+  }
+  .movieNow h2 {
+    display: inline-block;
+    font-size: 4rem;
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+  .movieNow button {
+    /* position: absolute; */
+    float: right;
+    margin-top: 50px;
+  }
+  .titleAverage {
+    font-size: 1.8rem;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding-top: 20px;
+    padding-bottom: 30px;
+    margin-bottom: 10px;
+    /* background: rgb(125, 116, 116); */
+  }
+  .posterBox img {
+    cursor: pointer;
+  }
+  .Poster {
+    width: 100%;
+    height: 370px;
+  }
+
+  /* popup */
+  .popupWrap {
+    position: fixed;
+    top: 0;
+    left: 0;
+    /* display: none; */
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+  }
+  .popupModal {
+    width: 80%;
+    height: 100%;
+    margin: 10% auto 0;
+    opacity: 1;
+  }
+  #opci {
+    opacity: 1;
+  }
+  .popupPosterBox {
+    /* position: absolute; */
+    width: 45%;
+    height: 650px;
+    background: green;
+    float: left;
+  }
+  .popupPosterBox img {
+    width: 100%;
+    height: 100%;
+  }
+  .clear {
+    clear: both;
+  }
+  .popupRight {
+    float: right;
+    width: 50%;
+    height: 500px;
+  }
+  .popupPlotBox {
+    width: 100%;
+    height: 100%;
+    background: #d9d9d9;
+    border-radius: 10px;
+    position: relative;
+  }
+  .popup_close {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+  }
+  .plotTitleP {
+    width: 95%;
+    margin: 0 auto;
+  }
+  .plotTitle h3 {
+    font-size: 4.2rem;
+    padding-top: 20px;
+    margin-bottom: 30px;
+  }
+  .Plots {
+    font-size: 2rem;
+    line-height: 1.3;
+  }
+  .popupEtcBox {
+    width: 100%;
+    height: 100px;
+    background: #d9d9d9;
+    margin-top: 50px;
+    border-radius: 10px;
+  }
+  .etcBar {
+    display: flex;
+    justify-content: space-between;
+    line-height: 5;
+    font-size: 2rem;
+    width: 95%;
+    margin: 0 auto;
+  }
+  .popup_close {
+    float: right;
+  }
+  .serchList {
+    width: 100%;
+    color: #000;
+    background: #fff;
+    font-size: 2.5rem;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    max-height: 200px;
+    overflow-y: auto;
+  }
+  .serchItem {
+    width: 100%;
+  }
+  .inputList {
+    width: 100%;
+    position: relative;
+  }
+  .inputList li {
+    padding-top: 10px;
+    margin-bottom: 10px;
+    cursor: pointer;
+  }
+}
+/* 노트북 끝 */

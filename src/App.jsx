@@ -1,5 +1,10 @@
 import { useEffect, useState } from "react";
-import "./App.css";
+import "../css/mobile.css";
+import "../css/tablet.css";
+import "../css/laptop.css";
+import "../css/desktop.css";
+
+// import "./App.css";
 
 import Header from "./components/Header";
 import MainBanner from "./components/MainBanner";
