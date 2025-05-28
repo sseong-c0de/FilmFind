@@ -1,13 +1,20 @@
 import { Link } from "react-router-dom";
 import ReactDOM from "react-dom";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 
 function Popup({ selectItem, setSelectItem }) {
   if (!selectItem) return null;
 
   const { poster_path, title, name, overview, vote_average } = selectItem;
   const imageUrl = `https://image.tmdb.org/t/p/original${poster_path}`;
+  const [openPopup, setOpenPopup] = useState(true);
 
+  useEffect(() => {
+    document.body.classList.add("fixed");
+    return () => {
+      document.body.classList.remove("fixed");
+    };
+  }, []);
   useEffect(() => {
     const keyDownClose = (e) => {
       if (e.key === "Escape") {

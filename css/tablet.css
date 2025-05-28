@@ -13,6 +13,11 @@
 }
 /* 태블릿시작 */
 @media screen and (min-width: 768px) {
+  body.fixed{
+    position: fixed;
+    overflow: hidden;
+    width: 100%;;
+  }
   .Header_Logo {
     background-color: #27374d;
     width: 100%;
@@ -201,6 +206,7 @@
     height: 100%;
     margin: 0 auto;
     overflow-y: auto;
+
   }
 
   .plotTitle h3 {
@@ -214,7 +220,7 @@
   }
 
   .plotTitleP::-webkit-scrollbar {
-  width: 6px; /* 스크롤바 너비 */
+  width: 5px; /* 스크롤바 너비 */
 }
 
 .plotTitleP::-webkit-scrollbar-thumb {
