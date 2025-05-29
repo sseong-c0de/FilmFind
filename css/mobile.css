@@ -14,7 +14,11 @@
 }
 body {
   font-family: "Suit", sans-serif;
-
+}
+body.fixed{
+  position: fixed;
+  overflow: scroll;
+  width: 100%;;
 }
 h1 {
   font-family: "Londrina Bold", sans-serif;
@@ -191,6 +195,7 @@ h1 {
   position: relative;
 }
 .popup_close {
+  cursor: pointer;
   position: absolute;
   right: 10px;
   top: 10px;

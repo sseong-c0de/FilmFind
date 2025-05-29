@@ -7,8 +7,27 @@ function Popup({ selectItem, setSelectItem }) {
 
   const { poster_path, title, name, overview, vote_average } = selectItem;
   const imageUrl = `https://image.tmdb.org/t/p/original${poster_path}`;
-  const [openPopup, setOpenPopup] = useState(true);
 
+  window.addEventListener("scroll", () => {
+    console.log("widnowscrool", window.scrollY);
+    console.log("element", document.documentElement.scrollTop);
+    console.log("body", document.body.scrollTop);
+  });
+  useEffect(() => {
+    if (selectItem) {
+      const scrollY = window.scrollY;
+      document.body.classList.add("fixed");
+      document.body.style.top = `-${scrollY}px`;
+      return () => {
+        const savedY = parseInt(document.body.style.top || "0") * -1;
+        document.body.classList.remove("fixed");
+        document.body.style.top = "";
+        window.scrollTo(0, savedY);
+      };
+    }
+  }, [selectItem]);
+
+  //셀렉아이템에 아이템이 들어있다면 팝업뒤에 메인창은 움직이지 않게하기
   useEffect(() => {
     document.body.classList.add("fixed");
     return () => {
