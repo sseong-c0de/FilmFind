@@ -182,6 +182,11 @@
     background-color: rgba(0, 0, 0, 0.7);
     z-index: 100;
   }
+  @media (max-height: 800px) {
+    .popupWrap {
+      overflow-y: scroll;
+    }
+  }
   .popupModal {
     width: 80%;
     height: 100%;
@@ -283,7 +288,5 @@
     height: 30px;
   }
 }
-
-
 
 /* pc끝 */

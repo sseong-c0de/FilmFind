@@ -157,6 +157,11 @@
     height: 100%;
     background-color: rgba(0, 0, 0, 0.7);
   }
+  @media (max-height: 680px) {
+    .popupWrap {
+      overflow-y: scroll;
+    }
+  }
   .popupModal {
     width: 80%;
     height: 100%;
