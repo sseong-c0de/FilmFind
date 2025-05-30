@@ -8,21 +8,6 @@ function Popup({ selectItem, setSelectItem }) {
   const { poster_path, title, name, overview, vote_average } = selectItem;
   const imageUrl = `https://image.tmdb.org/t/p/original${poster_path}`;
 
-  // useEffect(() => {
-  //   const popupActive = document.querySelector(".popupWrap");
-  //   if (selectItem) {
-  //     if (window.innerHeight <= 575) {
-  //       popupActive.classList.add("active");
-  //     } else {
-  //       popupActive.classList.remove("active");
-  //     }
-  //   }
-  //   return () => {
-  //     if (popupActive) {
-  //       popupActive.classList.remove("active");
-  //     }
-  //   };
-  // }, [selectItem]);
   useEffect(() => {
     if (selectItem) {
       const scrollY = window.scrollY;
@@ -38,7 +23,6 @@ function Popup({ selectItem, setSelectItem }) {
     }
   }, [selectItem]);
 
-  //팝업을 켰는데 윈도우창이 Height가 575px이하 일 경우 .popupWrap의 overflow-y를 scroll로 변경.
   useEffect(() => {
     const keyDownClose = (e) => {
       if (e.key === "Escape") {
