@@ -146,8 +146,8 @@
   }
   .movieNow button {
     /* position: absolute; */
-    float: right;
-    margin-top: 50px;
+    /* float: right; */
+    /* margin-top: 50px; */
   }
   .titleAverage {
     font-size: 2rem;

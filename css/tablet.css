@@ -111,7 +111,7 @@
   .movieNow {
     width: 80%;
     margin: 0 auto;
-    /* position: relative; */
+    position: relative;
   }
   .movieNow h2 {
     display: inline-block;
@@ -120,9 +120,8 @@
     padding-bottom: 50px;
   }
   .movieNow button {
-    /* position: absolute; */
-    float: right;
-    margin-top: 50px;
+    position: absolute;
+    /* float: right; */
   }
   .titleAverage {
     font-size: 1.8rem;
