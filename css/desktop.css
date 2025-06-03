@@ -144,11 +144,7 @@
     padding-top: 50px;
     padding-bottom: 50px;
   }
-  .movieNow button {
-    /* position: absolute; */
-    /* float: right; */
-    /* margin-top: 50px; */
-  }
+
   .titleAverage {
     font-size: 2rem;
     display: flex;
