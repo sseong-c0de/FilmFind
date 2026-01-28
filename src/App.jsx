@@ -30,19 +30,17 @@ function App() {
   }, []);
 
   const fetchData = async (url, setData) => {
-    const options = {
-      method: "GET",
-      headers: {
-        accept: "application/json",
-        Authorization:
-          "Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJiZDBkMjFiNGU4Y2VjNzdlODQxZTE2MGY1MGMyZjE5MyIsIm5iZiI6MTczNDMzNDY5Mi44Niwic3ViIjoiNjc1ZmQ4ZTRkNmY1ZTg0NThiOGI1Y2Q0Iiwic2NvcGVzIjpbImFwaV9yZWFkIl0sInZlcnNpb24iOjF9.5w9FXyn85SyGTvXyj8PLpge2XR6c3jYUfYb-3lClZzI",
-      },
-    };
+    const apiKey = import.meta.env.VITE_TMDB_API_KEY;
+    const join = url.includes("?") ? "&" : "?";
+    const finalUrl = `${url}${join}api_key=${apiKey}`;
+
     try {
-      const response = await axios.get(url, options);
+      const response = await axios.get(finalUrl, {
+        headers: { accept: "application/json" },
+      });
       setData(response.data.results);
     } catch (error) {
-      console.error(`데이터 가져오기 실패: ${url}`, error);
+      console.error(`데이터 가져오기 실패: ${finalUrl}`, error);
     }
   };
   useEffect(() => {
